@@ -1,0 +1,190 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Abstract - Simakov Nikita Vladimirovich - Context-Dependent Spelling Error Detection and Correction System Based on Language Models</title>
+  <link rel="stylesheet" type="text/css" href="../css/style.css">
+</head>
+
+<body lang="en">
+
+	<div id="topblock">
+		<div id="langbox">
+			<a href="index.htm"><img src="../images/ru-flag.png" alt="Russian" title="Russian" width="28" height="20" style="color: #ffff;">ru</a>
+		</div>
+		<div id="menu">
+			<a class="button color" href="../indexe.htm">Resume</a>
+			
+			<a class="button colorfix">Abstract</a>
+			<a class="button color" href="../ind/indexe.html">Individual Section</a>
+		</div>
+		<div id="donntu">
+			<a class="button color" href="http://kubsu.ru/en" target="_blank">KubSU</a> &nbsp;
+			<a class="button color" href="https://kubsu.ru/user" target="_blank" title="Go to Student Portal">Student Portal</a>
+		</div>
+	</div><!-- topblock -->
+
+	<div id="middleblockosn">
+		<div id="maintext">
+			
+			<h1 style="text-align: center;">Master's Thesis Abstract</h1>
+			<p class="comment">
+			This abstract was written while the master's thesis is still in progress. Final completion: May 2026. The full text of the work and related materials can be obtained from the author or supervisor after this date.
+			</p>
+			
+			<h2>Contents</h2>
+
+			<ul class=content>
+				<li class=ct1><a href="#p1">1. Relevance of the Topic</a>
+				<li class=ct1><a href="#p2">2. Research Objective, Tasks, and Expected Results</a>
+				<li class=ct1><a href="#p3">3. Brief Overview of the First Three Chapters</a>
+				<li class=ct2><a href="#p31">3.1 Basic Concepts and Technologies</a>
+				<li class=ct2><a href="#p32">3.2 Problems in Automation</a>
+				<li class=ct2><a href="#p33">3.3 Theoretical Foundations of Context-Dependent Spelling Correction</a>
+				<li class=ct1><a href="#p4">4. Results</a>
+				<li class=ct1><a href="#ref">List of References</a>
+			</ul>
+
+			<a name=p1></a>
+			<h2>1. Relevance of the Topic</h2>
+			
+			<p>
+			A context-dependent spelling error detection and correction system based on language models is relevant due to the growing volume of textual information and the need to ensure its quality.
+			 Errors in texts can distort meaning, reduce trust in authors, and complicate data processing in machine learning systems.
+			 A context-dependent approach allows for consideration of the lexical environment, which improves correction accuracy compared to context-independent methods.
+			</p>
+
+			<p> Statistics show that users make typos in 10–15% of cases, with context playing a key role in correct correction in 26% of cases.
+				 In search engines, for example, errors can lead to irrelevant results or lack of answers.
+				In professional fields (scientific articles, legal documents), spelling accuracy is critically important for preserving legal validity and information reliability. </p>
+			
+			<a name='p2'></a>
+			<h2>2. Research Objective, Tasks, and Expected Results</h2>
+			
+			<p>To develop and evaluate a context-dependent spelling error detection and correction system,
+				 using language models, to improve correction accuracy in Russian-language texts. </p>
+			
+			<p>In this regard, we set the goal to develop a program in the high-level programming language Python, packaged as a Helm chart for deployment in Kubernetes,
+				 and designed for monitoring and detecting anomalies in container behavior. Its main task is to check the runtime behavior of cluster containers, which
+				  includes creating a large number of files, high memory and CPU consumption, etc. This goal predetermined the following main research tasks:</p>
+			
+			<p>This goal predetermined the following main research tasks:</p>
+			<ol>
+				<li style="margin-left: 50px;">Analyze existing methods for detecting and correcting spelling errors, including context-independent and context-dependent approaches.
+				<li style="margin-left: 50px;">Study modern language models (BERT, GPT, etc.) and their application in text correction tasks.
+				<li style="margin-left: 50px;">Design a system architecture combining a language model and an error model (e.g., based on Damerau-Levenshtein distance).
+				<li style="margin-left: 50px;">Implement context-aware error detection and correction algorithms.
+				<li style="margin-left: 50px;">Evaluate system quality using metrics (Precision, Recall, F1 Score) and compare results with existing solutions.
+			</ol>
+			<p>The master's thesis consists of four chapters, introduction, conclusion, and bibliography.</p>
+
+			<p>The introduction justifies the relevance of developing intelligent spelling check systems capable of considering context, unlike traditional dictionary methods.
+				 It formulates the objective, tasks, object and subject of the research,
+				 as well as the scientific novelty and practical significance of the work.</p>
+			<p>The first chapter presents a theoretical investigation of the problem of context-dependent text correction. It begins with an overview of the evolution of spelling check systems:
+				 from simple dictionary comparisons and statistical n-gram models to modern neural approaches. The main focus is on analyzing the capabilities and limitations of language models
+				 (Language Models, LM), particularly transformer architectures (BERT, GPT, their derivatives), for error detection and correction tasks.
+				  Based on this analysis, functional and non-functional requirements for the system being created are formulated,
+				 such as accuracy of recognizing contextual errors (omission/commission), processing speed, and support for subject domains.</p>
+			<p>The second chapter describes the technology stack necessary for system implementation.</p>
+			<p>The third chapter details the system development and training process.</p>
+			<p>The fourth chapter is devoted to testing, analysis of results, and integration of the created product.</p>
+
+			<a name=p3></a>
+			<h2>3. Brief Overview of the First Three Chapters</h2>
+	
+			<a name=p31></a>
+			<h3 style="margin-bottom: 20px; margin-left: 35px;">3.1 Basic Concepts and Technologies</h3>
+
+			<p>
+				Traditional spelling check systems, long considered the standard, were based on two main principles:
+			</p>
+			<ul>
+				<li style="margin-left: 50px;">Dictionary method: The system checks each word in the text against a loaded dictionary (lexicon). Unknown words are flagged as potential errors. Main drawbacks:
+					inability to detect contextual errors and the need for constant dictionary expansion to cover specialized terminology.</li>
+				<li style="margin-left: 50px;">Statistical method based on N-grams (most often bigrams and trigrams): The model is trained on large text corpora, estimating the probability of word sequences. It can suggest corrections for unknown words by choosing a candidate that forms the most probable combination with surrounding words from the model's perspective. This method already considers local context,
+					but its capabilities are limited by the N-word window and inability to capture deep semantic and syntactic connections.</li>
+			</ul>
+			
+			<p>The modern approach considered in this work is based on deep learning language models,
+				which fundamentally change the paradigm. The correction task is formulated not as a dictionary search,
+				but as a prediction or generation task of the most probable correct text in a given context.</p>
+			
+			<a name=p32></a>
+			<h3 style="margin-bottom: 20px; margin-left: 35px;">3.2 Problems in Automation</h3>
+			<p>Automatically making corrections to text without user involvement carries significant risks, both in terms of semantic distortion and preservation of authorial intent.
+				In situations where context is ambiguous or subjective, algorithmic intervention can lead to undesirable distortions, up to interpreting the original content with opposite meaning.
+				Furthermore, automatic correction can violate stylistic and genre features of the text, especially when working with literary, legal, or scientific documents.
+				Therefore, an interactive strategy is preferable, where the system suggests corrections, but their final application is decided by the user.
+				This approach significantly increases trust in the system and reduces the number of potentially destructive automatic changes.</p>
+			<p>One of the key problems in automating error detection in text is the inability of systems to reliably interpret the semantic level of content.
+				Even with correct grammatical structure, a sentence can be absurd or incorrect from the standpoint of meaning.
+				Simple rules and traditional algorithms cannot identify such inconsistencies, as they lack mechanisms for understanding logical connections between
+				objects and actions. Effective detection of such errors requires integrating models with elements of semantic analysis and "common sense," such as
+				 transformer architectures enhanced with external knowledge bases or context-dependent reasoning mechanisms. However, even modern language models struggle
+				with correct interpretation of complex and ambiguous contexts, significantly limiting the accuracy and reliability of automatic analysis.</p>
+
+			<a name=p33></a>
+			<h3  style="margin-bottom: 20px; margin-left: 35px;">3.3 Theoretical Foundations of Context-Dependent Spelling Correction</h3>	
+			<p>Historically, the task of automated spelling correction was solved within the paradigm of isolated lexical analysis,
+				 based on deterministic token matching against a reference dictionary. The key disadvantage of this approach is its fundamental inability to identify
+				  contextually irrelevant lexemes, where a graphemically correct word is semantically or syntactically mismatched with its environment.</p>
+			
+			<p>Statistical methods, particularly N-th order language models (N-gram), partially mitigated this limitation by estimating joint probability
+				 of word sequences within a limited sliding window.
+				 However, their predictive capability is strictly limited by length N and does not extend to identifying complex syntagmatic and discursive dependencies. </p>
+			
+			<p>A qualitative leap is associated with the introduction of deep neural language models into the field of natural language processing,
+				 architecturally based on the self-attention mechanism. Pre-trained models,
+				 formed as a result of training on masked language modeling (MLM) or autoregressive prediction tasks,
+				  encapsulate distributed semantic representations in their parameters. The ability of these architectures to model long-distance dependencies
+				   and contextual polysemy allows reformulating the correction task: not as a search task (by dictionary),
+				 but as a conditional generation or sequential classification task, where the target token is predicted based on the entire ensemble of contextual embeddings.</p>
+
+			<a name=p4></a>
+			<h2>4. Results</h2>
+			<p>During the work, a modular system was designed and implemented, with a fine-tuned Transformer architecture language model at its core.</p>
+			<p>The developed context-dependent spelling correction system was implemented based on the fine-tuned RuBERT model within a modular pipeline architecture,
+				including sequential stages of error detection, generation of correction candidates, and their ranking using probabilistic assessment in the context of the entire sentence.
+				 The functional interface of the system is a REST API based on FastAPI.</p>
+			<p> Comparative analysis with baseline methods (dictionary rules) and modern analogues (SpellRuBERT, T5) showed
+				 that the developed system demonstrates comparable quality on general errors (F1=0.92, Accuracy=0.90 on RUSpell) and achieves better results in the target task of correcting
+				  contextual errors (F1=0.85, Accuracy=0.82). This confirms that the chosen approach based on fine-tuning a transformer model
+				 with a contextual candidate ranking mechanism is effective for resolving semantic ambiguity, for example, when correcting homophones and paronyms.</p>
+
+			<a name=ref></a>
+			<h2>List of References</h2>
+			<ol>
+				<li style="margin-left: 50px;"><a name="ref1"></a> Comparative Analysis of Approaches in Web Application API Development – URL: <a href="https://cyberleninka.ru/article/n/sravnitelnyy-analiz-podhodov-v-razrabotke-api-veb-prilozheniy/viewer ">Link</a>.
+				<li style="margin-left: 50px;"><a name="ref2"></a> API Scripts and Features of Their Use – URL: <a href="URL: https://cyberleninka.ru/article/n/api-skripty-i-osobennoispolzovaniya/viewer ">Link</a>.
+				<li style="margin-left: 50px;"><a name="ref3"></a> RCENI API Interfaces in Applied Problems – URL: <a href="https://www.semanticscholar.org/reader/077a6f147bd94930433405989775d805c6da1d20/">Link</a>.
+				<li style="margin-left: 50px;"><a name="ref4"></a> API Gateway Management Based on Microservice Architecture – URL: <a href="https://cyberleninka.ru/article/n/upravlenie-api-shlyuzom-na-osnove-arhitektury-mikroservisa/viewer">Link</a>.
+				<li style="margin-left: 50px;"><a name="ref5"></a> Microservices and API Architecture – URL: <a href="https://sciguide.hse.ru/tech/api/ ">Link</a>.
+				<li style="margin-left: 50px;"><a name="ref6"></a> NATS, GraphQL and Kafka – URL: <a href="https://habr.com/ru/articles/875330/ ">Link</a>.
+				<li style="margin-left: 50px;"><a name="ref7"></a> A Study on Modern Messaging System – URL: <a href="https://www.semanticscholar.org/reader/077a6f147bd94930433405989775d805c6da1d20">Link</a>.
+				<li style="margin-left: 50px;"><a name="ref8"></a> Comparison of NATS, RabbitMQ, NSQ, and Kafka – URL: <a href="https://gcore.com/learning/nats-rabbitmq-nsq-kafka-comparison/ ">Link</a>.
+				<li style="margin-left: 50px;"><a name="ref9"></a> TextIT – URL: <a href="https://habr.com/ru/articles/576888/">Link</a>.
+				<li style="margin-left: 50px;"><a name="ref10"></a> Using the OverlayFS Storage Driver – URL: <a href="https://digitology.tech/docs/docker/storage/storagedriver/overlayfs-driver.html">Link</a>.
+				<li style="margin-left: 50px;"><a name="ref11"></a> API Check – User Guides – URL: <a href="https://text.ru/api-check/manual">Link</a>.
+				<li style="margin-left: 50px;"><a name="ref12"></a> Sapling: 5 Best Grammar and Spell Checking APIs – URL: <a href="https://sapling.ai/docs/api/comparison/ ">Link</a>.
+				<li style="margin-left: 50px;"><a name="ref13"></a> Grammar Check API – URL: <a href="https://textgears.com/ru/api">Link</a>.
+				<li style="margin-left: 50px;"><a name="ref14"></a> Yandex.Cloud: Fixing Grammatical Errors in Text – URL: <a href="https://yandex.cloud/ru/docs/foundationmodels/prompts/yandexgpt/content-fixing-errors?utm_referrer=https%3A%2F%2Fyandex.ru%2F">Link</a>.
+				<li style="margin-left: 50px;"><a name="ref15"></a> Not Just New Relic: A Look at Datadog and Atatus – URL: <a href="https://habr.com/ru/companies/flant/articles/465177/">Link</a>.
+				<li style="margin-left: 50px;"><a name="ref21"></a> Grafana – Project Dashboard – URL: <a href="https://skillbox.ru/media/code/grafana-pribornaya-panel-proekta/?ysclid=m60exx0mp6582596561#stk-1">Link</a>.
+				<li style="margin-left: 50px;"><a name="ref22"></a> Grafana: A Tool for Convenient Visualization of Monitoring Metrics – URL: <a href="https://cloud.vk.com/blog/grafana-instrument-udobnoy-vizualizatsii-metrik-monitoringa/?ysclid=m60f4884ms238637031">Link</a>.
+				<li style="margin-left: 50px;"><a name="ref23"></a> Grafana. Dashboard Anything. Observe Everything – URL: <a href="https://grafana.com/grafana/">Link</a>.
+				<li style="margin-left: 50px;"><a name="ref24"></a> Clickhouse, Grafana and 3000 Graphs. How to Build a Fast Dashboard System – URL: <a href="https://habr.com/ru/companies/ozontech/articles/774712/">Link</a>.
+				<li style="margin-left: 50px;"><a name="ref25"></a> 10 Best Grafana Alternatives – URL:<a href=" https://www.atatus.com/blog/grafana-alternatives/">Link</a>.
+				<li style="margin-left: 50px;"><a name="ref26"></a> The Leading Grafana Alternatives – URL: <a href="https://logit.io/blog/post/grafana-alternatives/">Link</a>.
+			</ol>
+		
+		</div> <!-- maintext -->
+	
+	</div> <!-- middleblock -->
+
+	<footer>
+		<p>© 2025 | Personal Page of Simakov Nikita Vladimirovich</p>
+	</footer>
+
+</body>
+</html>
